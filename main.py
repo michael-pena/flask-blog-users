@@ -25,7 +25,7 @@ login_manager.init_app(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-
+db.create_all()
 
 ##CONFIGURE TABLES
 
@@ -75,7 +75,7 @@ class Comment(db.Model):
 
 
 # create db with all tables
-#db.create_all()
+db.create_all()
 
 
 gravatar = Gravatar(
