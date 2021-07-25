@@ -14,7 +14,7 @@ import os
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
-app.config['SECRET_KEY'] = os.enviorn.get("DATABASE_URL")
+app.config['SECRET_KEY'] = os.enviorn.get("SECRET_KEY")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
