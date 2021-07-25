@@ -75,7 +75,7 @@ class Comment(db.Model):
 
 
 # create db with all tables
-db.create_all()
+#db.create_all()
 
 
 gravatar = Gravatar(
